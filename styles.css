@@ -73,7 +73,19 @@ body {
 }
 
 .nav-bar {
+    display: grid;
+    place-content: start end;
+    padding: 16px;
+}
+.nav-item {
+    display: grid;
     place-content: start;
+}
+.nav-text {
+    grid-column: 2;
+}
+.nav-icon {
+    padding-right: 8px;
 }
 
 .content {
