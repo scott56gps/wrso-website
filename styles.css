@@ -1,0 +1,93 @@
+body {
+    background: hsl(210deg 30% 12%);
+}
+
+.wrapper {
+    --padding: 4px;
+    position: relative;
+    padding: var(--padding);
+    border: 1px solid hsl(210deg 10% 40%);
+    border-radius: 8px;
+
+    /* CSS Grid */
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+    /* percentages are a more rigid measurement */
+    /* grid-template-columns: 25% 75%; */
+
+    /* gap gives a fixed amount of space in-between all grid cells */
+    gap: 8px;
+}
+
+/*
+  Add a dashed line between the
+  two children, to indicate
+  approximately where the grid
+  column line is.
+*/
+/* .wrapper::after { */
+/*     content: ''; */
+/*     position: absolute; */
+/*     top: 2px; */
+/*     bottom: 2px; */
+/*     left: calc( */
+/*         25% + */
+/*         var(--padding) / 2 - */
+/*         1px */
+/*     ); */
+/*     border-left: */
+/*         2px dashed */
+/*         hsl(210deg 8% 50%); */
+/* } */
+
+.child {
+    display: grid;
+    place-content: center;
+    /* height: 100px; */
+    border:
+        2px solid hsl(210deg 8% 50%);
+    border-radius: 3px;
+    background: hsl(210deg 15% 20%);
+    color: white;
+    font-size: 1.325rem;
+    font-weight: bold;
+}
+/*
+  Add 1px space around the grid
+  line, to make it less subtle.
+  
+  Normally, I'd use the `gap`
+  property to do this, but as
+  we'll see, this property doesn't
+  work well with percentages
+*/
+/* .child:first-child { */
+/*     margin-right: 2px; */
+/* } */
+/* .child:last-child { */
+/*     margin-left: 2px; */
+/* } */
+.logo > img {
+    max-width: 100px;
+}
+
+.nav-bar {
+    place-content: start;
+}
+
+.content {
+    /* display: flow-root; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: start center;
+    text-align: center;
+}
+.content > img {
+    float: left;
+    width: 375px;
+}
+
+.content-body {
+    text-align: left;
+}
