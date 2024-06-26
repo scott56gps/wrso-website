@@ -20,27 +20,6 @@ body {
     gap: 8px;
 }
 
-/*
-  Add a dashed line between the
-  two children, to indicate
-  approximately where the grid
-  column line is.
-*/
-/* .wrapper::after { */
-/*     content: ''; */
-/*     position: absolute; */
-/*     top: 2px; */
-/*     bottom: 2px; */
-/*     left: calc( */
-/*         25% + */
-/*         var(--padding) / 2 - */
-/*         1px */
-/*     ); */
-/*     border-left: */
-/*         2px dashed */
-/*         hsl(210deg 8% 50%); */
-/* } */
-
 .child {
     display: grid;
     place-content: center;
@@ -53,21 +32,7 @@ body {
     font-size: 1.325rem;
     font-weight: bold;
 }
-/*
-  Add 1px space around the grid
-  line, to make it less subtle.
-  
-  Normally, I'd use the `gap`
-  property to do this, but as
-  we'll see, this property doesn't
-  work well with percentages
-*/
-/* .child:first-child { */
-/*     margin-right: 2px; */
-/* } */
-/* .child:last-child { */
-/*     margin-left: 2px; */
-/* } */
+
 .logo > img {
     max-width: 100px;
 }
@@ -80,6 +45,9 @@ body {
 .nav-item {
     display: grid;
     place-content: start;
+}
+.nav-item:hover {
+    background-color: blue;
 }
 .nav-text {
     grid-column: 2;
