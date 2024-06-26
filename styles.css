@@ -41,13 +41,17 @@ body {
     display: grid;
     place-content: start end;
     padding: 16px;
+    background-color: #47100B;
+    color: white;
 }
 .nav-item {
     display: grid;
     place-content: start;
 }
 .nav-item:hover {
-    background-color: blue;
+    /* background-color: blue; */
+    color: wheat;
+    cursor: pointer;
 }
 .nav-text {
     grid-column: 2;
