@@ -53,10 +53,15 @@ body {
     cursor: pointer;
 }
 .nav-text {
+    text-decoration: none;
+    color: inherit;
     grid-column: 2;
 }
 .nav-icon {
     padding-right: 8px;
+}
+.selected {
+    color: gold;
 }
 
 .content {
