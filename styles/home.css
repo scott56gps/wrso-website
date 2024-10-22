@@ -66,10 +66,14 @@ body {
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr;
     place-content: start center;
     text-align: left;
+    margin: 16px;
     gap: 16px;
+}
+.home-grid {
+    grid-template-columns: 1fr 2fr;
 }
 .content > img {
     float: left;
@@ -77,4 +81,17 @@ body {
 }
 .content-header {
     text-align: center;
+}
+
+/* Board */
+.profile-card {
+    display: flex;
+    align-items: center;
+}
+.profile-card > span {
+    margin-left: 8px;
+}
+.profile-image {
+    height: 200px;
+    border: 2px solid gold;
 }
